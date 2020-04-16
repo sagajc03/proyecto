@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Proyecto JS de JC</title>
+<script type="text/javascript">
+ alert("Bienvenido, aqui veras cosas sobre los agueros negros");
+ function ver_imagen()
+ {
+	 if(!document.images)
+	 return
+	 document.images.img.src=
+	 document.imagenes.imagen.options[document.imagenes.imagen.selectedIndex].value
+ }
+ 
+</script>
+<style type="text/css">
+#jj {
+	background-color: #000;
+	font-family: "Verdana", Geneva, sans-serif;
+	text-align: center;
+	color: #FFF;
+	font-size: xx-large;
+}
+#oto{
+	color: #FFF;
+	font-family:  "Gadget", sans-serif;
+	font-size: 16px;
+}
+#subtit{
+	color:#0FF;
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:18px;
+
+}
+#holo{
+		float: right;
+		width: auto;
+		margin: 20px 0px;
+		padding: 20px;
+		background: #003;
+		display: block;
+
+}
+#apDiv1 {
+	position: absolute;
+	width: 134px;
+	height: 65px;
+	z-index: 1;
+	left: 10px;
+	top: 918px;
+}
+#uno {
+	color: #FFF;
+	font-family:  "Gadget", sans-serif;
+	font-size: 16px;  
+}
+#f {
+	background:#FFF;
+}
+</style>
+<script language="javascript">
+var nom;
+nom= prompt("Escribe tu nombre","NOMBRE");
+
+function confirmar()
+{ 
+return confirm("¿Deseas entrar a esa página?")
+}
+function nombre()
+{
+var texto = document.getElementById("uno");
+ texto.innerHTML = "Hola " + nom;
+}
+//innerHTML para que el texto se parezca al demás
+function Ver_Hora()
+			{
+				var mihora = new Date();
+				var horas = mihora.getHours().toString();
+				var minutos = mihora.getMinutes().toString();
+				if (minutos.length == 1) minutos = "0" + minutos;
+				var segundos = mihora.getSeconds().toString();
+				if (segundos.length == 1) segundos = "0" + segundos;
+				document.forms[0].miReloj.value = horas + " : " + minutos + " : " + segundos;
+			}
+
+</script>
+</head>
+
+<body bgcolor="#006" onload="nombre()" link="#00FF00" alink="#CCFF00" vlink="#CC0066">
+
+<div class="" align="center" id="jj" onclick="">
+<strong>Agujeros Negros</strong>
+</div>
+<br />
+<p id="uno">
+hola
+</p>
+<aside id="holo">
+<p>
+	<img src="300px-BlackHole_Lensing.gif"alt= "Agujero negro" width="200" height="160" longdesc="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BlackHole_Lensing.gif/300px-BlackHole_Lensing.gif" align="right" />
+</p>
+
+	<form>
+		<p>
+			<input type="text" size="10" name="miReloj" id="Reloj">
+		</p>
+	</form>
+    <script>
+		var r = setInterval ("Ver_Hora()",500);
+	</script>
+<form name="imagenes" id="holo">
+<select name="imagen" size="1" onchange="ver_imagen()">
+<option selected="selected">Eligen imagen</option>
+<option value="simulated_bh.jpg">Simulación</option>
+<option value="comparacion.jpg">Comparación con simulación para pelicula</option>
+<option value="01-black-hole-a-consensus.jpg">Primer Agujero negro fotografiado</option>
+<option value="Messier_87_Hubble_WikiSky.jpg">Galaxia M87</option>
+</select>
+</form>
+<p>
+<img src="01-black-hole-a-consensus.jpg" name="img" width=300 height=150 border=3  id="holo">
+</p>
+</aside>
+<p id="subtit">
+¿Qué son los agujeros negros? 
+</p>
+<p id="oto">Los agujeros negros son los restos fríos de antiguas estrellas, tan densas que ninguna partícula material, ni siquiera la luz, es capaz de escapar a su poderosa fuerza gravitatoria.</p>
+<p id="subtit">
+Origen
+</p>
+<p id="oto">Mientras muchas estrellas acaban convertidas en <strong>enanas blancas</strong> o <strong>estrellas de neutrones</strong>, los agujeros negros representan la última fase en la evolución de enormes estrellas que fueron al menos de 10 a 15 veces más grandes que nuestro sol. </p>
+<p id="oto">
+Cuando las estrellas gigantes alcanzan el estadio final de sus vidas estallan en cataclismos conocidos como supernovas. Tal explosión dispersa la mayor parte de la estrella al vacío espacial pero quedan una gran cantidad de restos «fríos» en los que no se produce la fusión.</p>
+<p id="subtit">
+¿Dónde se suelen encontrar?
+</p>
+<p id="oto">
+Estas se suelen encontrar en muchas ocasiones en los centros de las galaxias, sobre toda las grandes, y repartidas en el universo  otras más pequeñas que se originan por la explosiones de estrellas bastantes masivas. Esto se explica un poco meor adelante.
+<p id="subtit">
+¿Hay tipos?
+</p>
+
+<p id="oto">Se han observado ampliamente dos clases principales de agujeros negros. Los agujeros negros de masa estelar con tres a docenas de veces la masa del Sol se extienden por toda nuestra galaxia, la Vía Láctea, mientras que los monstruos supermasivos que pesan 100,000 a miles de millones de masas solares se encuentran en los centros de la mayoría de las galaxias grandes, incluida la nuestra. Los astrónomos sospechan que hay una clase intermedia llamada agujeros negros de masa intermedia, que pesa entre 100 y más de 10,000 masas solares, pero hasta la fecha no se han observado de manera concluyente.</p>
+<p id="subtit">
+¿Crecen?
+</p>
+<p id="oto">
+Una vez creados, los agujeros negros pueden crecer acumulando materia que cae en ellos, incluido el gas eliminado de las estrellas vecinas e incluso otros agujeros negros.
+</p>
+<p id="subtit">
+Sobre la primera fotografía de uno
+</p>
+<p id="oto">
+El 10 de abril de 2019 pasará a la historia como un gran día: astrofísicos, en diversas partes del mundo y de manera simultánea, presentaron al mundo la primera imagen real de un hoyo negro que se encuentra en el centro de la galaxia M87.
+</p>
+<p id="oto">
+La fotografía es resultado del Event Horizon Telescope (EHT), un conjunto a escala planetaria de ocho radiotelescopios terrestres diseñado para capturar imágenes de hoyos negros. Uno de ellos, el Gran Telescopio Milimétrico “Alfonso Serrano”, situado en la cima del volcán Sierra Negra, en México. En el proyecto colaboran alrededor de 200 científicos.
+</p>
+<p id="oto">
+Los físicos y los astrónomos han aceptado la existencia de los agujeros negros, sin embargo, nunca habían captado uno directamente.  En conferencia de prensa desde la Ciudad de México, el doctor Laurent Loinard, investigador del Instituto de Radioastronomía y Astrofísica de la UNAM y participante en el EHT, explicó el significado de esta fotografía histórica.
+</p>
+<p id="oto">
+“Esta imagen es exactamente lo que se esperaba de un agujero negro masivo;  está constituida de un anillo brillante, casi exactamente circular, como se esperaba (…). En el centro de este anillo hay una zona más oscura que corresponde a la sombra que produce el agujero negro; esto se debe a que la gravedad es tan intensa que la luz, los fotones producidos dentro de una cierta zona (…) no puede escaparse del agujero negro y por lo tanto, esta región se ve oscura.”
+</p>
+<p id="oto">
+El borde de esa sombra es el llamado horizonte de sucesos,  donde la gravedad es tan extrema que incluso la luz no puede escapar.
+</p>
+<p id="oto">
+En 1915, Albert Einstein en su Teoría de la Relatividad General planteó que los fotones emitidos por un gas que cae en un agujero negro deben viajar en trayectorias curvas, formando un anillo de luz alrededor de una silueta oscura que corresponde al agujero negro. Un siglo después, la imagen obtenida mediante interferometría de línea de base muy larga, confirma esta predicción del célebre físico.
+</p>
+<p id="oto">
+Dicha técnica hace posible sincronizar a telescopios de todo el mundo para formar un enorme telescopio del tamaño de la Tierra y así observar una longitud de onda tal que permite que el EHT logre una resolución tan alta para captar el horizonte de eventos.
+</p>
+<p id="oto">
+Los datos obtenidos fueron enviados a supercomputadoras en Estados Unidos y luego analizados por un equipo de expertos.  Destaca la aportación de Katie Bouman, la joven experta en ciencias de la computación que desarrolló el algoritmo que permitió la obtención de la imagen.  Si bien, han dicho los integrantes del proyecto, la imagen no es el hoyo negro en sí, sino la de su horizonte de eventos tal como se esperaba con base en las imágenes obtenidas, los planteamientos teóricos y los análisis que realizaron los científicos.
+</p>
+<p id="subtit">
+Refencias
+</p>
+
+<li id="oto">
+	<a href="https://www.nationalgeographic.es/espacio/agujeros-negros" onclick="return confirmar()">
+  National Geographic</a>
+<li id="oto">
+<a href="https://www.nasa.gov/vision/universe/starsgalaxies/black_hole_description.html" onclick="return confirmar()">Nasa (en Inglés)</a>
+<li id="oto"><a href="http://ciencia.unam.mx/leer/854/la-primera-imagen-de-un-hoyo-negro-real" onclick="return confirm()">Página de la UNAM acerca del evento del agujero negro fotografiado</a>
+<br />
+<iframe src="https://www.nationalgeographic.es/espacio/2017/04/esta-podria-ser-la-primera-fotografia-jamas-sacada-de-un-agujero-negro" width="450" height="450" align="middle" id="f"></iframe><p id="oto"> Esta nota de Nathional Geographic trata de cuando se fotografió pero antes de que se pudiera ver la imagen (tardo alrededor de dos años conseguir información suficiente para organizar los diferentes datos, confirmalos, etc, y dar el resultado final).</p>
+<form>
+  <p>
+    <input type="button" value="Imprimir" onclick="window.print()">
+  </p>
+</form>
+<audio src="tutorial-battle-theme.mp3" preload="none" controls="controls"></audio>
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/TTGcK6MdyRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<a href="https://www.youtube.com/watch?v=TTGcK6MdyRo" onclick="return confirmar()">Enlace a video original</a>
+<br />
+<a href="https://www.nationalgeographic.es/espacio/2017/04/esta-podria-ser-la-primera-fotografia-jamas-sacada-de-un-agujero-negro" onclick="return confirmar()">Por si el iframe no funciona y deseas consultar</a>
+<div id="holo">Página crea por Juan Carlos Salas Gallegos como proyecto 
+</div>
+</body>
+</html>
