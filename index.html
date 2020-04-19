@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Proyecto JS de JC</title>
+<link rel="icon" href="01-black-hole-a-consensus.jpg" />
 <script type="text/javascript">
  alert("Bienvenido, aqui veras cosas sobre los agueros negros");
  function ver_imagen()
@@ -58,6 +59,9 @@
 #f {
 	background:#FFF;
 }
+#dos{
+
+}
 </style>
 <script language="javascript">
 var nom;
@@ -83,7 +87,13 @@ function Ver_Hora()
 				if (segundos.length == 1) segundos = "0" + segundos;
 				document.forms[0].miReloj.value = horas + " : " + minutos + " : " + segundos;
 			}
-
+			function cambioLink(){
+				var enlace =document.getElementById("dos");
+				enlace.href = "https://www.nationalgeographic.es/espacio/2017/04/esta-podria-ser-la-primera-fotografia-jamas-sacada-de-un-agujero-negro";
+			}
+			function eevee(){
+			window.open("https://pokedex.org/#/pokemon/133", "_blank", "width=600, height=400, resizable=yes, toolbar=yes, menubar=yes, status=yes, scrollbars=yes");
+			}
 </script>
 </head>
 
@@ -104,7 +114,7 @@ cargando...
 
 	<form>
 		<p>
-			<input type="text" size="10" name="miReloj" id="Reloj">
+			<input type="text" size="10" name="miReloj" id="Reloj" disabled="disabled">
 		</p>
 	</form>
     <script>
@@ -194,11 +204,16 @@ Refencias
   </p>
 </form>
 <audio src="tutorial-battle-theme.mp3" preload="none" controls="controls"></audio>
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/TTGcK6MdyRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<a href="https://www.youtube.com/watch?v=TTGcK6MdyRo" onclick="return confirmar()">Enlace a video original</a>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/TTGcK6MdyRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+
 <br />
-<a href="https://www.nationalgeographic.es/espacio/2017/04/esta-podria-ser-la-primera-fotografia-jamas-sacada-de-un-agujero-negro" onclick="return confirmar()">Por si el iframe no funciona y deseas consultar</a>
-<div id="holo"><a href="#inicio" id="holo" ><img src="flecha.png"  height="40" width="40"  /></a><br />Página crea por Juan Carlos Salas Gallegos como proyecto 
+
+<a id="dos" onclick="return confirmar()" >Por si el iframe no funciona y deseas consultar</a>
+
+<input type="button" value="desbloquear enlace" onclick="cambioLink()" />
+
+</div>
+<div id="holo" onclick="eevee()"><a href="#inicio" id="holo" style="alignment-adjust:central"><img src="flecha.png"  height="40" width="40" style="background-color:#FFF; alignment-adjust:before-edge" /></a><br />Página crea por Juan Carlos Salas Gallegos como proyecto <br />Pop-up fuera del tema
 </div>
 
 </body>
