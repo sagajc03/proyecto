@@ -1,2 +1,2 @@
 # proyecto
-Para la escuela
+Para la escuela de la prepa
